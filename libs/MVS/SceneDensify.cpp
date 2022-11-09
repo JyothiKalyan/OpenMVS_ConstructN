@@ -1908,24 +1908,20 @@ bool Scene::ComputeDepthMaps(DenseDepthMapData& data)
 	}
 
 //Change by Jyothi start
-std::cout<<"Changes start\n";
+std::cout<<"\nChanges start\n";
 for (IIndex idx: data.images) 
 {
 	std::cout<<"started0.\n";
 	const DepthData& depthData(data.depthMaps.arrDepthData[idx]);
-	if (!depthData.IsValid()){
-		std::cout<<"Invalid depth map";
-		continue;
-	}
 	const String rawName(ComposeDepthFilePath(depthData.GetView().GetID(), "dmap"));
 	DepthData depthData_loaded;
 	depthData_loaded.Load(rawName, 1);
 	const Image8U::Size sizeMap(depthData_loaded.depthMap.size());
-				//sizeMap.height ; sizeMap.width
-	 for (int i=0; i<10; ++i) {
-		for (int j=0; j<10; ++j) {
+	std::cout<<depthData_loaded(0,0)<<" ";
+	/* for (int i=0; i<sizeMap.height; ++i) {
+		for (int j=0; j<sizeMap.width; ++j) {
 			std::cout<<depthData_loaded(i,j)<<" ";
-	}}	
+	}}	*/
 				
 
 	//depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
