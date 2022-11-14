@@ -1934,14 +1934,14 @@ for (IIndex idx: data.images)
 			//depthData.depthMap(r, c) = depth;
 			//std::cout<<i<<"***"<<j<<"***"<<depthData_loaded.depthMap(i,j)<<" ";
 	}}	*/
+
+	//This line is giving segmenation error before the part of code begins
 	//depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
-	std::cout<<"\nsaved!!!!!!"<<rawName<<"\n";
+	
 
-	/* Try-1
 	depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), "dmap"));
-	depthData.DecRef();
-	*/
-
+	depthData_loaded.DecRef();
+	std::cout<<"\nsaved!!!!!!"<<rawName<<"\n";
 	
 }
 	
