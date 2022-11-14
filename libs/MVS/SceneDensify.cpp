@@ -1915,7 +1915,7 @@ std::cout<<"Changes start\n";
 for (IIndex idx: data.images) 
 {
 	std::cout<<"started0.\n";
-/*	const DepthData& depthData(data.depthMaps.arrDepthData[idx]);
+	const DepthData& depthData(data.depthMaps.arrDepthData[idx]);
 	if (!depthData.IsValid()){
 		std::cout<<"Invalid depth map";
 		continue;
@@ -1937,7 +1937,7 @@ for (IIndex idx: data.images)
 
 	//depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
 	std::cout<<"\nsaved!!!!!!"<<rawName<<"\n";
-*/	
+	
 }
 	
 std::cout<<"all changed code execution done\n";
