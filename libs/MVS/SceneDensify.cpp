@@ -1908,7 +1908,6 @@ bool Scene::ComputeDepthMaps(DenseDepthMapData& data)
 	}
 
 //Change by Jyothi start
-//Change by Jyothi start
 std::cout<<"Changes start\n";
 
 
@@ -1935,8 +1934,14 @@ for (IIndex idx: data.images)
 			//depthData.depthMap(r, c) = depth;
 			//std::cout<<i<<"***"<<j<<"***"<<depthData_loaded.depthMap(i,j)<<" ";
 	}}	*/
-	depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
+	//depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
 	std::cout<<"\nsaved!!!!!!"<<rawName<<"\n";
+
+	/* Try-1
+	depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), "dmap"));
+	depthData.DecRef();
+	*/
+
 	
 }
 	
