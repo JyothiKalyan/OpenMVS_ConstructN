@@ -1930,7 +1930,7 @@ for (IIndex idx: data.images)
 	const Image8U::Size sizeMap(depthData_loaded.depthMap.size());
 	//sizeMap.height; sizeMap.width;
 	 for (int i=0; i<10; ++i) {
-		for (int j=0; j<10 ++j) {
+		for (int j=0; j<10 ;++j) {
 			std::cout<<i<<"***"<<j<<"***"<<depthData_loaded.depthMap(i,j)<<" ";
 	}}	
 				
