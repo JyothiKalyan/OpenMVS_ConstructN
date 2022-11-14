@@ -1932,7 +1932,7 @@ for (IIndex idx: data.images)
 	 for (int i=0; i<sizeMap.height; ++i) {
 		for (int j=0; j<sizeMap.width; ++j) {
 			//depthData.depthMap(r, c) = depth;
-			std::cout<<i<<"***"<<j<<"***"<<depthData_loaded.depthMap(i,j)<<" ";
+			//std::cout<<i<<"***"<<j<<"***"<<depthData_loaded.depthMap(i,j)<<" ";
 	}}	
 	depthData_loaded.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
 	std::cout<<"\nsaved!!!!!!"<<rawName<<"\n";
