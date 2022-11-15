@@ -1923,9 +1923,11 @@ for (IIndex idx: data.images)
 	DepthData depthData_loaded;
 	depthData_loaded.Load(rawName, 1);
 	if (!depthData_loaded.IsValid()){ std::cout<<"Invalid Loaded depth map \n"; }
-	std::cout << "Printing size: "<< sizeof(depthData.depthMap) ;
+	
 	//depthData.depthMap = depthData_loaded.depthMap;
 	const Image8U::Size sizeMap(depthData_loaded.depthMap.size());
+	const Image8U::Size sizeMap2(depthData.depthMap.size());
+	std::cout << "Printing size: "<< sizeof(depthData.depthMap) <<"    "<< sizeMap2.height <<"   " << sizeMap2.width ;
 	/*
 	 for (int i=0; i<sizeMap.height; ++i) {
 		for (int j=0; j<sizeMap.width; ++j) {
