@@ -1934,7 +1934,7 @@ for (IIndex idx: data.images)
 			//depthData.depthMap(r, c) = depth;
 			//std::cout<<i<<"***"<<j<<"***"<<depthData_loaded.depthMap(i,j)<<" ";
 	}}	*/
-	DepthData.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
+	depthData.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
 	std::cout<<"\nsaved!!!!!!"<<rawName<<"\n";
 
 	/* Try-1
