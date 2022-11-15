@@ -1925,7 +1925,7 @@ for (IIndex idx: data.images)
 	if (!depthData_loaded.IsValid()){
 		std::cout<<"Invalid Loaded depth map \n";
 	}
-	depthData.depthMap = depthData_loaded.depthMap
+	depthData.depthMap = depthData_loaded.depthMap;
 	const Image8U::Size sizeMap(depthData_loaded.depthMap.size());
 	/*
 	 for (int i=0; i<sizeMap.height; ++i) {
