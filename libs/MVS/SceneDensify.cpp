@@ -1922,10 +1922,9 @@ for (IIndex idx: data.images)
 	const String rawName(ComposeDepthFilePath(depthData.GetView().GetID(), "dmap"));
 	DepthData depthData_loaded;
 	depthData_loaded.Load(rawName, 1);
-	if (!depthData_loaded.IsValid()){
-		std::cout<<"Invalid Loaded depth map \n";
-	}
-	depthData.depthMap = depthData_loaded.depthMap;
+	if (!depthData_loaded.IsValid()){ std::cout<<"Invalid Loaded depth map \n"; }
+	std::cout << "Printing size: "<< sizeof(depthData.depthMap) ;
+	//depthData.depthMap = depthData_loaded.depthMap;
 	const Image8U::Size sizeMap(depthData_loaded.depthMap.size());
 	/*
 	 for (int i=0; i<sizeMap.height; ++i) {
@@ -1934,7 +1933,7 @@ for (IIndex idx: data.images)
 			//depthData.depthMap(r, c) = depth;
 			//std::cout<<i<<"***"<<j<<"***"<<depthData_loaded.depthMap(i,j)<<" ";
 	}}	*/
-	depthData.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
+	//depthData.Save(ComposeDepthFilePath(depthData.GetView().GetID(), data.nEstimationGeometricIter < 0 ? "dmap" : "geo.dmap"));
 	std::cout<<"\nsaved!!!!!!"<<rawName<<"\n";
 
 	/* Try-1
