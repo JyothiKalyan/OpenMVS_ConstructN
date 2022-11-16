@@ -2154,6 +2154,7 @@ void Scene::DenseReconstructionFilter(void* pData)
 			break; }
 
 		case EVT_ADJUSTDEPTHMAP: {
+			std::cout << "Adjust Depth Map";
 			const EVTAdjustDepthMap& evtImage = *((EVTAdjustDepthMap*)(Event*)evt);
 			const IIndex idx = data.images[evtImage.idxImage];
 			DepthData& depthData(data.depthMaps.arrDepthData[idx]);
@@ -2169,8 +2170,8 @@ void Scene::DenseReconstructionFilter(void* pData)
 				return;
 			}
 			ASSERT(depthData.GetRef() == 1);
-			File::deleteFile(ComposeDepthFilePath(depthData.GetView().GetID(), "filtered.dmap").c_str());
-			File::deleteFile(ComposeDepthFilePath(depthData.GetView().GetID(), "filtered.cmap").c_str());
+			//File::deleteFile(ComposeDepthFilePath(depthData.GetView().GetID(), "filtered.dmap").c_str());
+			//File::deleteFile(ComposeDepthFilePath(depthData.GetView().GetID(), "filtered.cmap").c_str());
 			#if TD_VERBOSE != TD_VERBOSE_OFF
 			// save depth map as image
 			if (g_nVerbosityLevel > 2) {
